@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Login</title>
+</head>
+<body>
+<h1>Log in with Twitch</h1>
+<button onclick="loginWithTwitch()">Login with Twitch</button>
+
+<script>
+    function loginWithTwitch() {
+        const clientId = 'your-client-id';
+        const redirectUri = 'https://yourdomain.com/signin-twitch';
+        const responseType = 'code';
+        const scope = '';
+
+        const authUrl = `https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=${responseType}&scope=${scope}`;
+        window.location.href = authUrl;
+    }
+</script>
+</body>
+</html>
